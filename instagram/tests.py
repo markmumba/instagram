@@ -36,3 +36,7 @@ class ProfileTestClass(TestCase):
         user = User(username = 'mark')
         self.profile = Profile(profile_photo = 'salah',user_bio ='web designer',last_update = 'date',user=user)
 
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.profile, Profile))
+
