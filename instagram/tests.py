@@ -10,5 +10,8 @@ from django.contrib.auth.models import User
 # Create your tests here.
 
 class ImageTestClass(TestCase):
-    
 
+    def setUp(self):
+        self.image = Image(image ='imageurl', image_name='nature', image_caption='wowo', likes=200, comments='wonderful')
+
+    
