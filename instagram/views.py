@@ -29,14 +29,14 @@ def new_status(request, username):
     current_user = request.user
     username = current_user.username
     if request.method == 'POST':
-        form = NewStatusForm(request.POST,request.FILES)
+        form = NewsStatusForm(request.POST,request.FILES)
         if form.is_valid():
             image =form.save()
             image.user = request.user
             image.save()
         return redirect('allTimelines')
     else:
-        form = NewsStatusForm()
+        form =NewsStatusForm()
     return render (request,'new_status.html',{"form":form})
 
 
