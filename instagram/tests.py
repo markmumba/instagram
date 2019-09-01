@@ -14,4 +14,7 @@ class ImageTestClass(TestCase):
     def setUp(self):
         self.image = Image(image ='imageurl', image_name='nature', image_caption='wowo', likes=200, comments='wonderful')
 
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image,Image))
+
     
