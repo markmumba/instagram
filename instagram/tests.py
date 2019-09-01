@@ -29,3 +29,10 @@ class ImageTestClass(TestCase):
         images = Image.objects.all()
         self.assertTrue(len(images)==0)
 
+
+class ProfileTestClass(TestCase):
+
+    def setUp(self):
+        user = User(username = 'mark')
+        self.profile = Profile(profile_photo = 'salah',user_bio ='web designer',last_update = 'date',user=user)
+
