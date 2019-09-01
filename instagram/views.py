@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Image,Comments,Profile
+from .forms import NewCommentForm,NewsStatusForm
 
 # Create your views here.
 
@@ -20,4 +21,19 @@ def profile(request):
 def new_status(request, username):
     current_user = request.user
     username = current_user.username
-    if request.metho
+    if request.method == 'POST':
+        form = NewStatusForm(request.POST,request.FILES)
+        if form.is_valid():
+            image =form.save()
+            image.user = request.user
+            image.save()
+        return redirect('allTimelines')
+    else:
+        form = NewsStatusForm()
+    return render (request,'new_status.html',{"form":form})
+
+
+def user_profile(request,user_id):
+    profile = Profile.objects.get(id=user_id)
+    images = Image.objects.all().filter(user_id=user_id)
+    return render(request, 'profile.html', {'profile':profile, 'images':images})
