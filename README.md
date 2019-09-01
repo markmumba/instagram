@@ -1,7 +1,7 @@
 # Instagram Clone
 This is a web application clone for [Instagram]
 
-## Created by [Mweru Muchai](https://github.com/markmumba)
+## Created by [mark mumba](https://github.com/markmumba)
 
 ## Description
 This is a cloned web application for instagram where users can upload photos,download photos from other users and follow other people.
@@ -52,4 +52,4 @@ As a user I would like to:
 
   
 ## License
-MIT &copy;2017 **[Esther Mweru Muchai](https://github.com/markmumba)
+MIT &copy;2019 **[Mark Mumba](https://github.com/markmumba)
