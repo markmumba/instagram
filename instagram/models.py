@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Profile (models.Model):
     profile_photo =models.ImageField(upload_to = 'profiles/',null = True)
     user_bio = models.TextField()
-    user =models.ForeignKey(User)
+    user =models.ForeignKey(User , null=True)
     last_update=models.DateTimeField(auto_now_add=True, null=True)
 
 
@@ -26,7 +26,7 @@ class Image(models.Model):
     image = models.ImageField(upload_to = 'photos/', null = True)
     image_name =models.CharField(max_length= 40 ,null =True)
     image_caption = models.TextField(null= True)
-    likes = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0 ,null=True)
     date_uploaded = models.DateTimeField(auto_now_add= True, null= True)
     user = models.ForeignKey(User, null =True)
     profile = models.ForeignKey(Profile, null= True)
