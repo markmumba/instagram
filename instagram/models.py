@@ -1,11 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import User
+# from tinymce .models import HTMLField
 
 # Create your models here.
 
 class Profile (models.Model):
     profile_photo =models.ImageField(upload_to = 'profiles/',null = True)
     user_bio = models.TextField()
-    # user =models.ForeignKey(User)
+    user =models.ForeignKey(User)
     last_update=models.DateTimeField(auto_now_add=True, null=True)
 
 
@@ -26,7 +28,7 @@ class Image(models.Model):
     image_caption = models.TextField(null= True)
     likes = models.IntegerField(default=0)
     date_uploaded = models.DateTimeField(auto_now_add= True, null= True)
-    # user = models.ForeignKey(User, null =True)
+    user = models.ForeignKey(User, null =True)
     profile = models.ForeignKey(Profile, null= True)
 
     class Meta:
@@ -49,7 +51,7 @@ class Image(models.Model):
 
 class Comments(models.Model):
     comment = models.CharField(max_length = 40 ,null=True)
-    # user = models.ForeignKey(user , null =True)
+    user = models.ForeignKey(User , null =True)
     Image =models.ForeignKey(Image , null = True)
     time_comment = models.DateTimeField(auto_now_add= True ,null=True)
 
