@@ -1,8 +1,8 @@
 # Instagram Clone
 This is a web application clone for [Instagram]
 
-![looking at timeline](image/Screenshot from 2019-09-02 10-30-18.png);
 
+![ wawawawawa] (https://drive.google.com/open?id=1-4DzAiUZ2PIOMWga3MZYY-8Woe39BJe8)
 
 ## Created by [mark mumba](https://github.com/markmumba)
 
