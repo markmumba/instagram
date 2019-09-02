@@ -11,7 +11,7 @@ urlpatterns = [
         views.new_status, name='newStatus'),
     url(r'^user/(\d+)', views.user_profile, name='userProfiles'),
     url(r'^image/(\d+)', views.single_image, name='singleImage'),
-    url(r'^profile/', views.find_profile, name='findProfile'),
+    
     url(r'^single_image/likes/(\d+)',
         views.single_image_like, name='singleImageLike'),
     url(r'^new/comment/(?P<username>[-_\w.]+)$',
