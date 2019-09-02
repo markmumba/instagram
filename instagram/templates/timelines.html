@@ -8,7 +8,7 @@
     </div>
     <div class="col-sm-10">
       {% for image in images %}
-      <div class="well" style="background-color:white; margin-bottom:70px">
+      <div class="well" style="background-color:black; margin-bottom:70px">
         <header>
           <img src="{{image.image.url}}" alt="" style="height:50px;width:50px; border-radius:50%">
           <p style="display:inline; margin-left:10px; font-weight:bolder; font-size:16px">{{image.user}}</p>
@@ -20,51 +20,19 @@
           <a href="{% url 'singleImageLike' image.id%}">
             <i class="material-icons">favorite_border</i>
           </a>
-          <a href="{% url 'newComment' image.user.username %}">
-            <i class="material-icons" style="margin-left:10px">chat_bubble_outline</i>
-          </a>
+        
+        
           <i class="material-icons" style="float:right; font-size:40px">bookmark_border</i>
         </div>
         <p style="margin-top:10px;font-weight:bolder; font-size:16px">{{image.likes}} Likes</p><br>
-        {% for comment in comments %}
-        <p style="margin-bottom:-1px"><span style=" margin-right:10px; font-weight:bolder; font-size:16px">{{comment.user}}</span>{{comment.comment}}</p>
+     
+      
         {% endfor %}
         <p style="font-size:12px;color:grey; margin-top:10px">{{image.date_uploaded|timesince|upper}} AGO</p>
         <hr>
       </div>
-      {% endfor %}
-    </div>
-  </div>
+    
  
-    <div class="col-sm-4">
-
-    </div>
-    {% else %}
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
-      {% for image in images %}
-      <div class="well" style="background-color:white">
-        <header>
-          <img src="https://static.pexels.com/photos/34950/pexels-photo.jpg" alt="" style="height:50px;width:50px; border-radius:50%">
-          <p style="display:inline; margin-left:10px; font-weight:bolder; font-size:16px">{{image.user}}</p>
-        </header>
-        <img src="{{image.image.url}}" class="img-responsive">
-        <div class="like" style="font-size:30px; margin-top:10px">
-          <i class="fa fa-heart-o" aria-hidden="true" style="margin-right:5px"></i>
-          <i class="material-icons" style="float:right; font-size:40px">bookmark_border</i>
-        </div>
-        <p style="margin-top:10px;font-weight:bolder; font-size:16px">{{image.likes}} Likes</p><br>
-
-
-        <hr>
-
-        </form>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="col-sm-3">
-    </div>
+    {% else%}
     {% endif %}
-  </div>
   {% endblock %}

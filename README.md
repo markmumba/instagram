@@ -1,6 +1,9 @@
 # Instagram Clone
 This is a web application clone for [Instagram]
 
+![looking at timeline](image/Screenshot from 2019-09-02 10-30-18.png);
+
+
 ## Created by [mark mumba](https://github.com/markmumba)
 
 ## Description
@@ -52,4 +55,4 @@ As a user I would like to:
 
   
 ## License
-MIT &copy;2019 **[Mark Mumba](https://github.com/markmumba)
+MIT &copy;2019 ![Mark Mumba](https://github.com/markmumba)
